@@ -1,0 +1,13 @@
+D:\source\repos\Bock_Sales\bin\Debug\Bock_Sales.exe.config
+D:\source\repos\Bock_Sales\bin\Debug\Bock_Sales.exe
+D:\source\repos\Bock_Sales\bin\Debug\Bock_Sales.pdb
+D:\source\repos\Bock_Sales\bin\Debug\Bock_Sales.xml
+D:\source\repos\Bock_Sales\obj\Debug\Bock_Sales.vbproj.AssemblyReference.cache
+D:\source\repos\Bock_Sales\obj\Debug\Bock_Sales.vbproj.SuggestedBindingRedirects.cache
+D:\source\repos\Bock_Sales\obj\Debug\Bock_Sales.Resources.resources
+D:\source\repos\Bock_Sales\obj\Debug\Bock_Sales.vbproj.GenerateResource.cache
+D:\source\repos\Bock_Sales\obj\Debug\Bock_Sales.vbproj.CoreCompileInputs.cache
+D:\source\repos\Bock_Sales\obj\Debug\Bock_Sales.exe
+D:\source\repos\Bock_Sales\obj\Debug\Bock_Sales.xml
+D:\source\repos\Bock_Sales\obj\Debug\Bock_Sales.pdb
+D:\source\repos\Bock_Sales\obj\Debug\Bock_Sales.Form1.resources
