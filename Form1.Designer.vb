@@ -25,10 +25,10 @@ Partial Class Form1
         Me.AutomotiveInformationGroupBox = New System.Windows.Forms.GroupBox()
         Me.YearLabel = New System.Windows.Forms.Label()
         Me.VehicleModel = New System.Windows.Forms.Label()
-        Me.LotNumber = New System.Windows.Forms.Label()
+        Me.LotNum = New System.Windows.Forms.Label()
         Me.WholesaleCheckBox = New System.Windows.Forms.CheckBox()
         Me.VehicleModelTextBox = New System.Windows.Forms.TextBox()
-        Me.LotNumberTextBox = New System.Windows.Forms.TextBox()
+        Me.LotNumTextBox = New System.Windows.Forms.TextBox()
         Me.YearTextBox = New System.Windows.Forms.TextBox()
         Me.SalesInformationGroupBox = New System.Windows.Forms.GroupBox()
         Me.TotalDueLabel = New System.Windows.Forms.Label()
@@ -56,7 +56,7 @@ Partial Class Form1
         Me.NewHDCheckBox = New System.Windows.Forms.CheckBox()
         Me.NewTireCheckBox = New System.Windows.Forms.CheckBox()
         Me.ComputeButton = New System.Windows.Forms.Button()
-        Me.ResetButton = New System.Windows.Forms.Button()
+        Me.resetfunctionButton = New System.Windows.Forms.Button()
         Me.TotalButton = New System.Windows.Forms.Button()
         Me.ExitButton = New System.Windows.Forms.Button()
         Me.AutomotiveInformationGroupBox.SuspendLayout()
@@ -69,10 +69,10 @@ Partial Class Form1
         '
         Me.AutomotiveInformationGroupBox.Controls.Add(Me.YearLabel)
         Me.AutomotiveInformationGroupBox.Controls.Add(Me.VehicleModel)
-        Me.AutomotiveInformationGroupBox.Controls.Add(Me.LotNumber)
+        Me.AutomotiveInformationGroupBox.Controls.Add(Me.LotNum)
         Me.AutomotiveInformationGroupBox.Controls.Add(Me.WholesaleCheckBox)
         Me.AutomotiveInformationGroupBox.Controls.Add(Me.VehicleModelTextBox)
-        Me.AutomotiveInformationGroupBox.Controls.Add(Me.LotNumberTextBox)
+        Me.AutomotiveInformationGroupBox.Controls.Add(Me.LotNumTextBox)
         Me.AutomotiveInformationGroupBox.Controls.Add(Me.YearTextBox)
         Me.AutomotiveInformationGroupBox.Location = New System.Drawing.Point(35, 31)
         Me.AutomotiveInformationGroupBox.Name = "AutomotiveInformationGroupBox"
@@ -99,14 +99,14 @@ Partial Class Form1
         Me.VehicleModel.TabIndex = 5
         Me.VehicleModel.Text = "Vehicle Make/Model"
         '
-        'LotNumber
+        'LotNum
         '
-        Me.LotNumber.AutoSize = True
-        Me.LotNumber.Location = New System.Drawing.Point(36, 47)
-        Me.LotNumber.Name = "LotNumber"
-        Me.LotNumber.Size = New System.Drawing.Size(76, 16)
-        Me.LotNumber.TabIndex = 4
-        Me.LotNumber.Text = "Lot Number"
+        Me.LotNum.AutoSize = True
+        Me.LotNum.Location = New System.Drawing.Point(36, 47)
+        Me.LotNum.Name = "LotNum"
+        Me.LotNum.Size = New System.Drawing.Size(76, 16)
+        Me.LotNum.TabIndex = 4
+        Me.LotNum.Text = "Lot Number"
         '
         'WholesaleCheckBox
         '
@@ -122,22 +122,29 @@ Partial Class Form1
         '
         Me.VehicleModelTextBox.Location = New System.Drawing.Point(188, 84)
         Me.VehicleModelTextBox.Name = "VehicleModelTextBox"
-        Me.VehicleModelTextBox.Size = New System.Drawing.Size(368, 22)
+        Me.VehicleModelTextBox.Size = New System.Drawing.Size(327, 22)
         Me.VehicleModelTextBox.TabIndex = 2
+        Me.VehicleModelTextBox.TabStop = False
+        Me.VehicleModelTextBox.Text = "Ford Escape"
         '
-        'LotNumberTextBox
+        'LotNumTextBox
         '
-        Me.LotNumberTextBox.Location = New System.Drawing.Point(188, 42)
-        Me.LotNumberTextBox.Name = "LotNumberTextBox"
-        Me.LotNumberTextBox.Size = New System.Drawing.Size(112, 22)
-        Me.LotNumberTextBox.TabIndex = 1
+        Me.LotNumTextBox.Location = New System.Drawing.Point(188, 42)
+        Me.LotNumTextBox.Name = "LotNumTextBox"
+        Me.LotNumTextBox.Size = New System.Drawing.Size(112, 22)
+        Me.LotNumTextBox.TabIndex = 1
+        Me.LotNumTextBox.TabStop = False
+        Me.LotNumTextBox.Text = "779"
         '
         'YearTextBox
         '
-        Me.YearTextBox.Location = New System.Drawing.Point(456, 42)
+        Me.YearTextBox.Location = New System.Drawing.Point(415, 42)
+        Me.YearTextBox.MaxLength = 4
         Me.YearTextBox.Name = "YearTextBox"
         Me.YearTextBox.Size = New System.Drawing.Size(100, 22)
         Me.YearTextBox.TabIndex = 0
+        Me.YearTextBox.TabStop = False
+        Me.YearTextBox.Text = "2010"
         '
         'SalesInformationGroupBox
         '
@@ -223,14 +230,18 @@ Partial Class Form1
         Me.PriceLabel.Name = "PriceLabel"
         Me.PriceLabel.Size = New System.Drawing.Size(41, 16)
         Me.PriceLabel.TabIndex = 7
-        Me.PriceLabel.Text = "Price:"
+        Me.PriceLabel.Text = "cost:"
         '
         'TotalDueTextBox
         '
         Me.TotalDueTextBox.Location = New System.Drawing.Point(151, 261)
         Me.TotalDueTextBox.Name = "TotalDueTextBox"
+        Me.TotalDueTextBox.ReadOnly = True
         Me.TotalDueTextBox.Size = New System.Drawing.Size(190, 22)
         Me.TotalDueTextBox.TabIndex = 6
+        Me.TotalDueTextBox.TabStop = False
+        Me.TotalDueTextBox.Text = "0.00"
+        Me.TotalDueTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'TradeInTextBox
         '
@@ -238,34 +249,53 @@ Partial Class Form1
         Me.TradeInTextBox.Name = "TradeInTextBox"
         Me.TradeInTextBox.Size = New System.Drawing.Size(190, 22)
         Me.TradeInTextBox.TabIndex = 5
+        Me.TradeInTextBox.TabStop = False
+        Me.TradeInTextBox.Text = "0.00"
+        Me.TradeInTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'SalesTaxTextBox
         '
         Me.SalesTaxTextBox.Location = New System.Drawing.Point(151, 183)
         Me.SalesTaxTextBox.Name = "SalesTaxTextBox"
+        Me.SalesTaxTextBox.ReadOnly = True
         Me.SalesTaxTextBox.Size = New System.Drawing.Size(190, 22)
         Me.SalesTaxTextBox.TabIndex = 4
+        Me.SalesTaxTextBox.TabStop = False
+        Me.SalesTaxTextBox.Text = "0.00"
+        Me.SalesTaxTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'SubtotalTextBox
         '
         Me.SubtotalTextBox.Location = New System.Drawing.Point(151, 144)
         Me.SubtotalTextBox.Name = "SubtotalTextBox"
+        Me.SubtotalTextBox.ReadOnly = True
         Me.SubtotalTextBox.Size = New System.Drawing.Size(190, 22)
         Me.SubtotalTextBox.TabIndex = 3
+        Me.SubtotalTextBox.TabStop = False
+        Me.SubtotalTextBox.Text = "0.00"
+        Me.SubtotalTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'ExtrasTextBox
         '
         Me.ExtrasTextBox.Location = New System.Drawing.Point(151, 105)
         Me.ExtrasTextBox.Name = "ExtrasTextBox"
+        Me.ExtrasTextBox.ReadOnly = True
         Me.ExtrasTextBox.Size = New System.Drawing.Size(190, 22)
         Me.ExtrasTextBox.TabIndex = 2
+        Me.ExtrasTextBox.TabStop = False
+        Me.ExtrasTextBox.Text = "0.00"
+        Me.ExtrasTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'DiscountTextBox
         '
         Me.DiscountTextBox.Location = New System.Drawing.Point(151, 66)
         Me.DiscountTextBox.Name = "DiscountTextBox"
+        Me.DiscountTextBox.ReadOnly = True
         Me.DiscountTextBox.Size = New System.Drawing.Size(190, 22)
         Me.DiscountTextBox.TabIndex = 1
+        Me.DiscountTextBox.TabStop = False
+        Me.DiscountTextBox.Text = "0.00"
+        Me.DiscountTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'PriceTextBox
         '
@@ -273,6 +303,9 @@ Partial Class Form1
         Me.PriceTextBox.Name = "PriceTextBox"
         Me.PriceTextBox.Size = New System.Drawing.Size(190, 22)
         Me.PriceTextBox.TabIndex = 0
+        Me.PriceTextBox.TabStop = False
+        Me.PriceTextBox.Text = "0.00"
+        Me.PriceTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'ExteriorGroupBox
         '
@@ -294,7 +327,6 @@ Partial Class Form1
         Me.BothRadioButton.Name = "BothRadioButton"
         Me.BothRadioButton.Size = New System.Drawing.Size(55, 20)
         Me.BothRadioButton.TabIndex = 3
-        Me.BothRadioButton.TabStop = True
         Me.BothRadioButton.Text = "Both"
         Me.BothRadioButton.UseVisualStyleBackColor = True
         '
@@ -305,7 +337,6 @@ Partial Class Form1
         Me.UndercoatRadioButton.Name = "UndercoatRadioButton"
         Me.UndercoatRadioButton.Size = New System.Drawing.Size(91, 20)
         Me.UndercoatRadioButton.TabIndex = 2
-        Me.UndercoatRadioButton.TabStop = True
         Me.UndercoatRadioButton.Text = "Undercoat"
         Me.UndercoatRadioButton.UseVisualStyleBackColor = True
         '
@@ -316,13 +347,13 @@ Partial Class Form1
         Me.PaintRadioButton.Name = "PaintRadioButton"
         Me.PaintRadioButton.Size = New System.Drawing.Size(121, 20)
         Me.PaintRadioButton.TabIndex = 1
-        Me.PaintRadioButton.TabStop = True
         Me.PaintRadioButton.Text = "Paint Touch-Up"
         Me.PaintRadioButton.UseVisualStyleBackColor = True
         '
         'NoneRadioButton
         '
         Me.NoneRadioButton.AutoSize = True
+        Me.NoneRadioButton.Checked = True
         Me.NoneRadioButton.Location = New System.Drawing.Point(20, 32)
         Me.NoneRadioButton.Name = "NoneRadioButton"
         Me.NoneRadioButton.Size = New System.Drawing.Size(61, 20)
@@ -393,14 +424,14 @@ Partial Class Form1
         Me.ComputeButton.Text = "Compute"
         Me.ComputeButton.UseVisualStyleBackColor = True
         '
-        'ResetButton
+        'resetfunctionButton
         '
-        Me.ResetButton.Location = New System.Drawing.Point(202, 539)
-        Me.ResetButton.Name = "ResetButton"
-        Me.ResetButton.Size = New System.Drawing.Size(102, 41)
-        Me.ResetButton.TabIndex = 5
-        Me.ResetButton.Text = "Reset"
-        Me.ResetButton.UseVisualStyleBackColor = True
+        Me.resetfunctionButton.Location = New System.Drawing.Point(202, 539)
+        Me.resetfunctionButton.Name = "resetfunctionButton"
+        Me.resetfunctionButton.Size = New System.Drawing.Size(102, 41)
+        Me.resetfunctionButton.TabIndex = 5
+        Me.resetfunctionButton.Text = "resetfunction"
+        Me.resetfunctionButton.UseVisualStyleBackColor = True
         '
         'TotalButton
         '
@@ -427,7 +458,7 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(643, 602)
         Me.Controls.Add(Me.ExitButton)
         Me.Controls.Add(Me.TotalButton)
-        Me.Controls.Add(Me.ResetButton)
+        Me.Controls.Add(Me.resetfunctionButton)
         Me.Controls.Add(Me.ComputeButton)
         Me.Controls.Add(Me.AccessoryGroupBox)
         Me.Controls.Add(Me.ExteriorGroupBox)
@@ -452,10 +483,10 @@ Partial Class Form1
     Friend WithEvents ExteriorGroupBox As GroupBox
     Friend WithEvents YearLabel As Label
     Friend WithEvents VehicleModel As Label
-    Friend WithEvents LotNumber As Label
+    Friend WithEvents LotNum As Label
     Friend WithEvents WholesaleCheckBox As CheckBox
     Friend WithEvents VehicleModelTextBox As TextBox
-    Friend WithEvents LotNumberTextBox As TextBox
+    Friend WithEvents LotNumTextBox As TextBox
     Friend WithEvents YearTextBox As TextBox
     Friend WithEvents TotalDueLabel As Label
     Friend WithEvents SalesTaxLabel As Label
@@ -481,7 +512,7 @@ Partial Class Form1
     Friend WithEvents NewHDCheckBox As CheckBox
     Friend WithEvents NewTireCheckBox As CheckBox
     Friend WithEvents ComputeButton As Button
-    Friend WithEvents ResetButton As Button
+    Friend WithEvents resetfunctionButton As Button
     Friend WithEvents TotalButton As Button
     Friend WithEvents ExitButton As Button
 End Class
